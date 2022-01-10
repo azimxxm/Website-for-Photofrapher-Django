@@ -191,10 +191,9 @@
 
 
 
-
     /* Mobile Menu */
     $('nav.main-navigation').meanmenu({
-        meanMenuClose: '<img class="black" src="img/icons/icon-close.png" alt="close icon"><img class="white" src="img/icons/icon-close-white.png" alt="close icon">',
+        meanMenuClose: '<img class="black" src="static/img/icons/icon-close.png" alt="close icon"><img class="white" src="static/img/icons/icon-close-white.png" alt="close icon">',
         meanMenuCloseSize: '18px',
         meanScreenWidth: '991',
         meanExpandableChildren: true,
