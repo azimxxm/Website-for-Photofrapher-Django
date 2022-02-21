@@ -1,20 +1,22 @@
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-k_@(afj=qxpnk@h^)i2e^&l95!l!zlx8y6=hiwr2792msr38)5'
+SECRET_KEY = 'django-insecure-+db*+_q5eq-0t-3q)azl1l%k+!k_doox^o@v@-t-4-*$+c5_02'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
 # Application definition
 
@@ -25,8 +27,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Local
+    
+    # Local Apps
     'Website.apps.WebsiteConfig',
+    
 ]
 
 MIDDLEWARE = [
@@ -39,7 +43,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Siroj_Foto.urls'
+ROOT_URLCONF = 'Siroj_App.urls'
 
 TEMPLATES = [
     {
@@ -57,11 +61,11 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Siroj_Foto.wsgi.application'
+WSGI_APPLICATION = 'Siroj_App.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -72,7 +76,7 @@ DATABASES = {
 
 
 # Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -91,11 +95,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
+# https://docs.djangoproject.com/en/4.0/topics/i18n/
 
 LANGUAGE_CODE = 'uz'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
@@ -105,7 +109,7 @@ USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
@@ -118,6 +122,6 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'static/media/'
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
