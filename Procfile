@@ -1,1 +1,1 @@
-web: gunicorn CRM.wsgi
+web: gunicorn Siroj_App.wsgi
