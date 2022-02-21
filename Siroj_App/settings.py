@@ -1,5 +1,4 @@
 from pathlib import Path
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,7 +15,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['siroj-photo.herokuapp.com', '127.0.0.1']
 # Activate Django-Heroku.
-django_heroku.settings(locals())
 
 # Application definition
 
