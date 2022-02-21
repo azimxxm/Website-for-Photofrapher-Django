@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-+db*+_q5eq-0t-3q)azl1l%k+!k_doox^o@v@-t-4-*$+c5_02
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['siroj-photo.herokuapp.com', '127.0.0.1']
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
