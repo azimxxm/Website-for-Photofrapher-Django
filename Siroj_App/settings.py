@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+db*+_q5eq-0t-3q)azl1l%k+!k_doox^o@v@-t-4-*$+c5_02'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['siroj-photo.herokuapp.com', '127.0.0.1']
 # Activate Django-Heroku.
@@ -113,7 +113,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "/tmp/build_5af11e68/staticfiles",
+    BASE_DIR / "static",
 ]
 
 
